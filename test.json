@@ -48,6 +48,6 @@
     {"tag": "management",
      "patterns": ["Can I get more information on the management", "Tell me about the management.", "Describe the management"],
      "responses": ["VVCE is managed by Vidyavardhaka Sangha. Vidyavardhaka Sangha (VVS) was established in 1949 by freedom fighters, philanthropists and visionary leaders namely Late Sahukar Channaiah and Late. K. Puttaswamy (Former Minister of Karnataka). VVS is a reputed and well established organization in Mysuru. VVS is managed by a managing committee consisting of  21 Members who work on honorary basis. VVS runs 10 educational institutions including Vidyavardhaka College of Engineering (VVCE). At present, VVS is under the able guidance and leadership of Sri Gundappa Gowda, President, Sri Shivalingappa B, Vice President, Sri P. Vishwanath, Secretary and Sri S N Lakshminarayana, Treasurer."]
-    },
+    }
 ]
 }
