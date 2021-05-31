@@ -11,7 +11,8 @@ import pickle
 import shutil
 import os
 
-shutil.rmtree('models')
+if os.path.isdir('models'):
+    shutil.rmtree('models')
 os.makedirs('models')
 
 with open("test.json") as file:
