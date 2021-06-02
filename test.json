@@ -39,15 +39,19 @@
     },
     {"tag": "principal",
      "patterns": ["Who is the principal?", "What is the principals name?"],
-     "responses": ["Dr B Sadashive Gowda obtained his Bachelor’s degree in Mechanical Engineering with distinction in 1986 from the University of Mysore. After that, he worked as lecturer for about three years. In 1991, he earned his Master of Engineering in Refrigeration and Air conditioning specialization from Coimbatore Institute of Technology, Coimbatore through GATE. In 1996, he obtained PhD in Mechanical Engineering from Indian Institute of Science, Bangalore."]
+     "responses": ["Dr B Sadashive Gowda"]
     },
     {"tag": "principaloffice",
      "patterns": ["Where is the principal's office?", "Where is the principal?", "Where do I find the principal's office?"],
-     "responses": ["It's in A-block ground floor, right next to the reception.", "It's right next to the recption in A-block ground floor."]
+     "responses": ["It's in A-block ground floor, right next to the reception.", "It's right next to the reception in A-block ground floor."]
     },
     {"tag": "management",
      "patterns": ["Can I get more information on the management", "Tell me about the management.", "Describe the management"],
      "responses": ["VVCE is managed by Vidyavardhaka Sangha. Vidyavardhaka Sangha (VVS) was established in 1949 by freedom fighters, philanthropists and visionary leaders namely Late Sahukar Channaiah and Late. K. Puttaswamy (Former Minister of Karnataka). VVS is a reputed and well established organization in Mysuru. VVS is managed by a managing committee consisting of  21 Members who work on honorary basis. VVS runs 10 educational institutions including Vidyavardhaka College of Engineering (VVCE). At present, VVS is under the able guidance and leadership of Sri Gundappa Gowda, President, Sri Shivalingappa B, Vice President, Sri P. Vishwanath, Secretary and Sri S N Lakshminarayana, Treasurer."]
+    },
+    {"tag": "area",
+     "patterns": ["Where is VVCE?", "Where is Vidyvardhaka", "What is the location of this college?", "What is the location of VVCE",  "What is the address of this college", "Where is the college located?"],
+     "responses": ["P.B. Number 2 0 6, Gokulam third Stage, Mysuru - 5 7 0 0 0 2, Karnataka, INDIA."]
     }
 ]
 }
