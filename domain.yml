@@ -1,0 +1,536 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- principal_personal_info:
+    use_entities: true
+- principal_meet_info:
+    use_entities: true
+- why_vvce_info:
+    use_entities: true
+- branch_offered_info:
+    use_entities: true
+- branch_offered_1_info:
+    use_entities: true
+- hostel_general_info:
+    use_entities: true
+- hostel_on_gender_fee_info:
+    use_entities: true
+- gender_info:
+    use_entities: true
+- institute_accredited_info:
+    use_entities: true
+- ranking_info:
+    use_entities: true
+- cet_verification_loc_info:
+    use_entities: true
+- cet_verification_date_info:
+    use_entities: true
+- college_admission_management_info:
+    use_entities: true
+- college_cocurricular_info:
+    use_entities: true
+- college_extra_curricular_info:
+    use_entities: true
+- hostels_facilities_info:
+    use_entities: true
+- college_ragging_info:
+    use_entities: true
+- college_security_info:
+    use_entities: true
+- college_transportation_info:
+    use_entities: true
+- college_physically_challenged_info:
+    use_entities: true
+- placement_1_info:
+    use_entities: true
+- scholarship_1_info:
+    use_entities: true
+- hostel_fee_concession_info:
+    use_entities: true
+- wifi_facility_info:
+    use_entities: true
+- coeducation_info:
+    use_entities: true
+- uniform_info:
+    use_entities: true
+- comedk_exam_info:
+    use_entities: true
+- cet_exam_info:
+    use_entities: true
+- fee_refund_info:
+    use_entities: true
+- vvce_location_insight_info:
+    use_entities: true
+- counselor_info:
+    use_entities: true
+- facilities_info:
+    use_entities: true
+- contact_for_admission_info:
+    use_entities: true
+- branches_info:
+    use_entities: true
+- vvce_address_info:
+    use_entities: true
+- fee_structure_info:
+    use_entities: true
+- management_fees_info:
+    use_entities: true
+- admission_process_under_covid_info:
+    use_entities: true
+- placements_info:
+    use_entities: true
+- entrepreneurship_guidance_info:
+    use_entities: true
+- internship_guidance_info:
+    use_entities: true
+- payment_mode_info:
+    use_entities: true
+- interval_payment_info:
+    use_entities: true
+- branches_actions_info:
+    use_entities: true
+- complaints_info:
+    use_entities: true
+- inform_name
+- inform_number
+- inform_email
+- incubation_centre_info
+- cafeteria_info
+- canteen_info
+- clinic_info
+- sports_complex_info
+- hostel_info
+- boys_hostel_info
+- girls_hostel_info
+- bank_info
+- parking_info
+- auditorium_info
+- first_year_info
+- highest_package_info
+- CS_dept_info
+- IS_dept_info
+- Civil_dept_info
+- math_dept_info
+- EEE_EC_dept_info
+- mech_dept_info
+- Polytechnic_info
+- cs_hod_info
+- ai_ml_hod_info
+- is_hod_info
+- civil_hod_info
+- maths_hod_info
+- eee_hod_info
+- ece_hod_info
+- mech_hod_info
+- physics_hod_info
+- chemistry_hod_info
+- mba_hod_info
+- library_info
+- rnd_info
+- principal_contact_info
+- college_contact_info
+- pg_info
+- management_admission_info
+- college_brochure_info
+- cet_cutoff_info
+- academic_rules_info
+- pg_machine_design_subjects_info
+- pg_cs_subjects_info
+- mba_scheme_info
+- latest_circular_info
+- osl_lab_info
+- apple_lab_info
+- college_faculty_info
+- sports_incharge_info
+- dean_student_welfare_info
+- dean_academics_info
+- dean_academics_vtu_info
+- dean_academics_autonomous_info
+- students_intake_info
+
+entities:
+- gender
+- seats
+- branches
+- branch
+- name
+- number
+- email
+- complaint
+- intake
+
+
+slots:
+  branches:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  gender:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  seats:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  branch:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  name:
+    type: text
+    influence_conversation: false
+  number:
+    type: text
+    influence_conversation: false
+  email:
+    type: text
+    influence_conversation: false
+  complaint:
+    type: text
+    influence_conversation: false
+  intake:
+    type: text
+    influence_conversation: false
+
+
+responses:
+  utter_greet:
+  - text: Hello. I'm the VVCE chatbot. How may I assist you?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_principal_name:
+  - text: Dr. B Sadashivegowda is our principal
+  utter_principal_room:
+  - text: You can find principal's office in A-block ground floor right next to the lift loby.
+  utter_vvce_info:
+  - text: We are an autonomous institute with industry relevant curriculum. We offer a blend of conventional and project-based teaching–learning experience. Our institute is accredited by NBA and NAAC  with A grade. We have qualified and committed faculty members who bring out the best in every student and much more
+  utter_ask_gender:
+  - text: Please mention whether boys hostel or girls hostel?
+  utter_accredation:
+  - text: Yes, VVCE is accredited by the National Assessment and Accreditation Council (NAAC) with A grade and also by the National Board of Accreditation (NBA), New Delhi.
+  utter_verification_date:
+  - text: Verification starts usually in the month of September
+  utter_verification_loc:
+  - text: Document verifcation happens in VVCE every year
+  utter_management_admission_info:
+  - text: |-
+      The admissions for the management quota begin in the month of May.
+      For more details, Mail: ao@vvce.ac.in
+      Phone: 0821-4276201/203/225
+      [vvce.in.ngrok.io/erp/cands.html](https://vvce.in.ngrok.io/erp/cands.html)
+  utter_cocurricular_info:
+  - text: |-
+      A number of co-curricular activities are routinely conducted. Some of them are as follows:
+      1.Industry Visits & Internships in industries
+      2.Participation in National-Level competitions like Go-Kart and Hackathons
+      3.University Innovation Fellowship at Stanford
+      4.Mini-projects & project competitions
+      5.Open-Source Community and Google Developers Group
+      6.WING (Wireless Inter-Networking Group)
+      7.Tech-Fests in every Department
+      8.Barcamp & TED-X
+      9.Industry collaborations with Google, AWS, Wurth Elektroniks, GitHub, Dassault Systéms, UI Path Global, Sanria, IGBA, MathWorks, UltraTech, etc.
+      10.Professional Bodies like Computer Society of India, ISTE (Staff and Student chapter), IEEE, ACM, ISHRAE, Society of Automotive Engineers, and many more for Professional Development.
+  utter_extracurricular_info:
+  - text: |-
+      VVCE believes in holistic personality development. Hence, it provides ample opportunities for extra-curricular activities like sports, cultural and outreach activities. In addition, the following student-led clubs help students improve communication skill, team-work, leadership qualities and ethics:
+      1.Vidyuth (Mysore's biggest cultural fest) & Taranga (Cultural Club)
+      2.ASPERA (The Entrepreneurship Cell)
+      3.Toastmasters Club (For public communication)
+      4.Vruthanth (Adventure Club)
+      5.Astronomical Club
+      6.Literature Club
+      7.Pixel Hut (Photography club)
+      8.Yoga and Meditation Club
+      9.Students also involve in outreach activities such as Unnat Bharat Abhiyan, Ek Bharat Shreshtha Bharat, and NSS activities to help the local society.
+      10.Sports activites like indoor sports complex, tennis court, gym, and so on are provided to maintain the required fitness levels
+  utter_hostel_facilities:
+  - text: |-
+      1.There are hostels for boys and girls separately which are spacious and well-maintained with facilities like gym, television room and Wi-Fi.
+      2.The hostels are situated on the campus, saving a lot of commuting time for the students.
+      3.A variety of dishes are served for breakfast, lunch and dinner, in order to cater to diverse needs of students.
+      4.One more hostel of international standard is under construction
+  utter_anti_ragging:
+  - text: |-
+      1.We have constituted an anti-ragging committee and anti-ragging squads as per the UGC/AICTE guidelines and are effectively functioning
+      2.We have taken preventive measures to ensure that there are no incidences of ragging both on and off campus.
+  utter_security_details:
+  - text: |-
+      1.We provide round-the-clock security to all the students and staff members in the campus.
+      2.We have ensured that the entire campus is under CCTV surveillance.
+  utter_transportation_details:
+  - text: VVCE is located in the heart of the city as a result of which it is well-connected by public transport. There are plans to provide college bus service in select routes.
+  utter_physically_challenged_info:
+  - text: Yes, they can. The campus is built with a barrier-free environment so that physically challenged students and elderly people do not face any kind of hindrance in their routine activities.
+  utter_placement_1:
+  - text: |-
+      1.We provide integrated training program to make students industry-ready. In addition, through industry collaborations, specific domain knowledge is imparted.
+      2.Consistently high placements of VVCE students in national and international companies is a testimony to placement opportunities.
+      A quick view of our recent achievements can be seen in this link: [vvce.ac.in/department/training-and-placement](https://vvce.ac.in/department/training-and-placement)
+  utter_scholarship_1:
+  - text: VVCE earmarks Rs. 30 Lakh every year for needy as well as meritorious students. Each scholarship is of Rs.25,000/-. Students may apply for this scholarship after their admission.
+  utter_hostel_fee_concession:
+  - text: VVCE provides hostel facility at a concessional fee of Rs.20,000/- per year for 5 girls and 10 boys from economically weak backgrounds.
+  utter_wifi_info:
+  - text: Yes. VVCE has 1000 Mbps internet bandwidth with 1:1 leased line.
+  utter_coeducation:
+  - text: Yes. VVCE has a student population of about 3500 with 40% girls and 60% boys.
+  utter_uniform_info:
+  - text: No
+  utter_comedk_exam_info:
+  - text: |-
+      COMED-K exam is scheduled to take place in the month of July/Aug.
+      For more information, visit: [www.comedk.org](https://www.comedk.org/)
+  utter_cet_exam_info:
+  - text: |-
+      CET exam is scheduled to take place in the Month of Aug, 2021.
+      For more information, visit: [www.kea.kar.nic.in](https://cetonline.karnataka.gov.in/kea/)
+  utter_refund_info:
+  - text: Yes, refund will be made after deducting a processing fee if the request for withdrawal is submitted to VVCE before closure of the admission date announced by the Government of Karnataka.
+  utter_mysore_insight:
+  - text: |-
+      VVCE is located in the Heritage City of Karnataka, Mysuru.
+       - Mysuru is well connected by road, rail and air and is located at a distance of 141 km from Bangalore city.
+       - It is often called the cultural capital of Karnataka because of its contributions and major artworks.
+       - It is also known for the World famous Dasara festivities.
+       - It is a City of Palaces, tranquility, rich culture and heritage.
+       - It is one of the cleanest cities in the country and the cost of living is much cheaper compared to that of Bangalore.
+       - With a number of industries, historical places, water bodies and temples, Mysuru is a delight to live in.
+  utter_counselor:
+  - text: Yes. We have a strong student mentoring system and a professional counsellor.
+  utter_facilities:
+  - text: |2-
+       - Bank of Baroda on our campus
+       - ATM
+       - Health Centre
+       - Library
+       - Gym
+       - Boys and Girls Hostels 
+       - For more information follow: [vvce.ac.in/facilities](https://vvce.ac.in/facilities)
+  utter_contact_for_admission:
+  - text: 'For admission details, contact: Phone Number: 080-4276201 / 202 / 225. E-mail: admissions@vvce.ac.in, ao@vvce.ac.in, principal@vvce.ac.in'
+
+  utter_vvce_address:
+  - text: |-
+      P.B. No.206, Gokulam III Stage, Mysuru - 570 002, Karnataka, INDIA. 
+      [g.page/vvceofficial?share](https://g.page/vvceofficial?share)
+  utter_fee_structure:
+  - text: |-
+      ##### FEE STRUCTURE - UG (BE)
+      Tuition fee as fixed by the Government of Karnataka/ COMED- K for the academic year 2021-22 (tentative) is as mentioned below:
+      *   Tuition fee for B. E. admitted through CET quota: Rs.58,806/- per year
+      *   Tuition fee for B. E. admitted through COMED-K / Management(*) quota:
+          *   For CSE, CSE(AI & ML), AI & ML, ISE, CV, ECE: Rs. 2,00,000/- per year
+          *   For ME & EEE: Rs. 1,50,000/- per year
+      Note: (*) Management fee applicable under management quota
+      Other fees/University/Exams fees payable at the time of admission for the academic year 2021-22 is Rs. 30,000/- per year
+      For further details contact +91 821 4276 200/201/203
+  utter_management_fees:
+  - text: |-
+      Follow this link: 
+      [vvce.ac.in/wp-content/uploads/2021/07/MAGMT-FEE-2021.pdf](https://vvce.ac.in/wp-content/uploads/2021/07/MAGMT-FEE-2021.pdf)
+  utter_placements:
+  - text: |-
+      Every year new companies add to the list. Students have bagged huge salary packages. 
+      Institute is well connected with top ranking companies like TCS, L&T Infotech, ..and many more. 
+      For more information please visit Placement Section on our website.
+  utter_entrepreneurship_guidance:
+  - text: The institute has an Entrepreneurship Nurturing Cell.
+  utter_internship_guidance:
+  - text: |-
+      The institute has a dedicated Internship Cell. 
+      We offer internship opportunities to students in external organizations.
+  utter_payment_mode:
+  - text: |-
+      You can pay the fees using DD/Pay Order in the name of "Vidyavardhaka College of Engineering". 
+      You can also pay the fees using cash or Net banking.
+  utter_interval_payment:
+  - text: Payment in installations/parts is not acceptable
+  utter_inform_program:
+    - text: "Please mention the program (UG/PG)"
+
+  utter_ask_name:
+    - text: "Please mention your name."
+  utter_ask_number:
+    - text: "Please mention your phone number."
+  utter_ask_email:
+    - text: "Please mention your email address."
+  utter_ask_complaint:
+    - text: "Please mention your complaint."
+  utter_incubation_centre:
+    - text: "The incubation centre is in G-block first floor."
+
+  utter_cafeteria:
+    - text: "The cafeteria is near the main gate."
+
+  utter_canteen:
+    - text: "The canteen is in the basement behind A-block."
+
+  utter_clinic:
+    - text: "The clinic is present behind A-block next to the canteen."
+
+  utter_sports_complex:
+    - text: "The sports complex is opposite to the canteeen behind A-block and opposite to D-block"
+
+  utter_hostel_general:
+    - text: "Please specify whether boys hostel or girls hostel."
+
+  utter_boys_hostel:
+    - text: "The boys hostel is on the other side of the high tension road which is opposite to the polytechnic building(G-block)"
+
+  utter_girls_hostel:
+    - text: "The girls hostel is inside the college campus in polytechnic building(G-block 2nd floor)"
+
+  utter_bank:
+    - text: "The bank is behind the A-block"
+
+  utter_parking:
+    - text: "We have three parking areas: \n - Next to the E-block(MBA-block) \n - Opposite to Polytechnic building(G-block) \n - Oppostite to Mechanical department(D-block).\n - 4 wheelers can park next to the MBA block."
+
+  utter_auditorium:
+    - text: "The auditorium is in D-block(Mechanical-block) first floor"
+
+  utter_highest_package:
+    - text: "Please contact TAP(Roopapriya J K)\nFollow these links: \n - [vvce.ac.in/department/training-and-placement/](https://vvce.ac.in/department/training-and-placement/)\n - [vvce.ac.in/wp-content/uploads/2020/03/PLACEMENTS-2020.pdf](https://vvce.ac.in/wp-content/uploads/2020/03/PLACEMENTS-2020.pdf)\n - [vvce.ac.in/wp-content/uploads/2020/03/VVCE-PLACEMENT-PROCESS.pdf](https://vvce.ac.in/wp-content/uploads/2020/03/VVCE-PLACEMENT-PROCESS.pdf)"
+
+  utter_CS_dept:
+    - text: "A-block"
+
+  utter_IS_dept:
+    - text: "A-block"
+
+  utter_Civil_dept:
+    - text: "B-block"
+
+  utter_math_dept:
+    - text: "B-block"
+
+  utter_EEE_EC_dept:
+    - text: "C-block"
+
+  utter_mech_dept:
+    - text: "D-block"
+
+  utter_Polytechnic:
+    - text: "G-block"
+
+  utter_cs_hod_info:
+    - text: "Dr RaviKumar V \nYou can find his cabin in A-block 3rd floor."
+  utter_ai_ml_hod_info:
+    - text: "Dr Vinutha D C \nYou can find her cabin in B-block 2nd floor."
+  utter_is_hod_info:
+    - text: "Dr A B Rajendra \nYou can find his cabin in A-block 1st floor."
+  utter_civil_hod_info:
+    - text: "Dr S K Prasad \nYou can find his cabin in B-block 1st floor."
+  utter_maths_hod_info:
+    - text: "Dr N Bhaskar \nYou can find his cabin in G-block 3rd floor."
+  utter_eee_hod_info:
+    - text: "Dr Shoba Shankar \nYou can find her cabin in C-block 1st floor"
+  utter_ece_hod_info:
+    - text: "Dr Chandrashekar M Patil \nYou can find his cabin in C-block 2nd floor"
+  utter_mech_hod_info:
+    - text: "Dr G V Naveen Prakash \nYou can find her cabin in D-block ground floor"
+  utter_physics_hod_info:
+    - text: "Dr Divakara S \nYou can find his cabin in G-block 1st floor"
+  utter_chemistry_hod_info:
+    - text: "Dr Anitha Sudhir \nYou can find her cabin in C-block 2nd floor"
+  utter_mba_hod_info:
+    - text: "Dr P S V Balaji Rao \nYou can find his cabin in E-block 2nd floor"
+  utter_library_info:
+    - text: "The library is in the ground floor of E-block(MBA-block). \nFor more info contact Nayana H \nContact no. +91 821 4276 285"
+  utter_rnd_info:
+    - text: "Dr. G B Krishnappa \nContact no. 9243528200 \nYou can contact him for more info on R&D"
+  utter_principal_contact_info:
+    - text: principal@vvce.ac.in
+  utter_college_contact_info:
+    - text: "Office Phone No: 0821-4276200/201/203 \nWebsite Address: [www.vvce.ac.in](www.vvce.ac.in) \nE-Mail Address: ao@vvce.ac.in / admissions@vvce.ac.in"
+  utter_pg_info:
+    - text: We offer MBA, Mtech in CS and Mechnical(Machine Design)
+  utter_college_brochure_info:
+    - text: "Follow this link \n[vvce.ac.in/wp-content/uploads/2021/07/digital-brochure-final.pdf](https://vvce.ac.in/wp-content/uploads/2021/07/digital-brochure-final.pdf)"
+  utter_cet_cutoff_info:
+    - text: "Follow this link \n[vvce.ac.in/wp-content/uploads/2021/06/VVCE-Cutoff-2020.pdf](https://vvce.ac.in/wp-content/uploads/2021/06/VVCE-Cutoff-2020.pdf)"
+  utter_academic_rules_info:
+    - text: "Follow this link \n[vvce.ac.in/wp-content/uploads/2021/06/VVCE-Cutoff-2020.pdf](https://vvce.ac.in/wp-content/uploads/2021/03/Academic-Regulations-Governing-the-Degree-of-Undergraduate-Postgraduate-Programmes-of-VVCE-2020.pdf)"
+  utter_pg_machine_design_subjects_info:
+    - text: "Follow this link \n[vvce.ac.in/wp-content/uploads/2020/11/Scheme-and-Syllabus-of-M.Tech-in-Machine-Design.pdf](https://vvce.ac.in/wp-content/uploads/2020/11/Scheme-and-Syllabus-of-M.Tech-in-Machine-Design.pdf)"
+  utter_pg_cs_subjects_info:
+    - text: "Follow this link \n[vvce.ac.in/wp-content/uploads/2020/11/Scheme-and-Syllabus-of-M.Tech-in-CSE.pdf](https://vvce.ac.in/wp-content/uploads/2020/11/Scheme-and-Syllabus-of-M.Tech-in-CSE.pdf)"
+  utter_mba_scheme_info:
+    - text: "Follow this link \n[vvce.ac.in/wp-content/uploads/2020/11/Scheme-and-Syllabus-of-M.Tech-in-CSE.pdf](https://vvce.ac.in/wp-content/uploads/2020/11/Scheme-and-Syllabus-of-MBA.pdf)"
+  utter_latest_circular_info:
+    - text: "Follow this link \n[vvce.ac.in/category/autonomous-notifications/](https://vvce.ac.in/category/autonomous-notifications/)"
+
+  utter_pgcet_cutoff:
+    - text: "Follow this link: [vvce.ac.in/wp-content/uploads/2021/06/VVCE-Cutoff-2020.pdf](https://vvce.ac.in/wp-content/uploads/2021/06/VVCE-Cutoff-2020.pdf)"
+
+  utter_tap_location:
+    - text: "Tap department office is in first floor, E-block(MBA-block)"
+
+  utter_osl_details:
+    - text: "You can locate OSL in A-block ground floor."
+
+  utter_apple_lab_details:
+    - text: "You can locate apple lab in A-block ground floor."
+
+  utter_faculty_details:
+    - text: "Please visit our college website for more information on faculties.\n[www.vvce.ac.in](https://www.vvce.ac.in)"
+
+  utter_sports_details:
+    - text: "Please contact Mr Puttaswami in his office located opposite to the Canteen behind A-block."
+
+  utter_dean_academics:
+    - text: "Dr. H S Dayananda => Dean Academics(VTU scheme)\nDr. T P Surekha => Dean Academics(Autonomous scheme)"
+
+  utter_dean_academics_vtu:
+    - text: "Dr. H S Dayananda => Dean Academics(VTU scheme). Office located in ground floor of Mechanical department(D-block)."
+
+  utter_dean_academics_autonomous:
+    - text: "Dr. T P Surekha => Dean Academics(Autonomous scheme). Office located in ECE department(C-block)."
+
+  utter_student_welfare:
+    - text: "Dr Ashok B C => Dean Student Welfare. Office located in Mechanical department(D-block)."
+
+
+actions:
+- action_utter_branch
+- action_utter_hostel_fee
+- action_utter_seat_cutoffs
+- action_utter_branch_offered
+- action_fill_table
+- action_utter_intake_number
+
+forms:
+  user_details_form:
+    name:
+      - type: from_text
+    number:
+      - type: from_text
+    email:
+      - type: from_text
+    complaint:
+      - type: from_text
+
+
+e2e_actions: []

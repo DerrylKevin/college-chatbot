@@ -1,0 +1,924 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hai
+    - henlo
+    - Ho
+    - Hi
+    - Good morning
+    - Hello
+    - Who are you?
+    - What is your name?
+    - hello good morning
+    - goog evening
+    - How old are you
+    - who are u
+    - what is your name
+    - How old are are you
+    - hi hodcs
+    - hey bro
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Bye
+    - good bye
+    - wrong answer
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - thank u
+    - thank you
+    - that sounds good
+    - correct
+    - perfect
+    - Thanks for assisting
+    - Thank you
+    - Ok
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: principal_personal_info
+  examples: |
+    - Who is the principal?
+    - Who is the principal of VVCE?
+    - Name of the principal.
+    - Principal Name
+    - Principal
+    - What is the principal name
+    - principal
+    - damn who is the principal
+    - vvce principal
+    - pincipal vvce
+    - who is the principal
+    - who is the pricipal
+- intent: principal_meet_info
+  examples: |
+    - Where can I meet principal?
+    - Where is principal's room?
+    - Where can I find principal's room?
+    - Principal's office?
+    - Where is principal's office?
+    - I want to meet principal where is the cabin
+    - principal chamber yelli
+    - so where is the principal office
+- intent: why_vvce_info
+  examples: |
+    - Why should my child study at VVCE?
+    - Why should I study in VVCE?
+    - Why should I prefer this college over others?
+    - What's special in this college?
+    - Why should my child study at Vidyavardhaka College?
+    - Why should I study in Vidyavardhaka?
+- intent: branch_offered_info
+  examples: |
+    - What are the branches offered?
+    - What are the streams offered?
+    - What are the departments in the college
+    - Branches in VVCE
+    - How many programs are offered in VVCE?
+    - Branches
+    - How many blocks are there
+- intent: institute_accredited_info
+  examples: |
+    - Is VVCE accredited?
+    - Are there any accredations for VVCE?
+    - NBA accredation
+    - NACC accredations
+    - NAC accredations
+- intent: branch_offered_1_info
+  examples: |
+    - Does the college offer [Computer Science](branches) course?
+    - Does the college offer [cs](branches) course?
+    - Is [Mechanical](branches) availabe?
+    - Is [Civil](branches) course availabe?
+    - Is [E and C](branches) branch availabe?
+    - Does the college have [triple e](branches) branch?
+    - Does the college have [eee](branches) branch?
+    - Does the college have [cse](branches) program?
+    - Does the college have [ise](branches) branch?
+    - Does the college have [ai/ml](branches) branch?
+    - Does the college have [artificial intelligence and machine learning](branches) branch?
+    - Does the college have [ai&ml](branches) branch?
+    - Does the college have [ml/ai](branches) department?
+- intent: hostel_general_info
+  examples: |
+    - What is the hostel fee?
+    - Tell me about hostel fee structure
+    - What are the hostel charges?
+    - hostel fee structure
+- intent: hostel_on_gender_fee_info
+  examples: |
+    - What is [boys](gender) hostel fee?
+    - [girls](gender) hostel fee structure
+- intent: gender_info
+  examples: |
+    - [boys](gender)
+    - [girls](gender)
+    - [boys](gender) hostel fee
+    - [girls](gender) hostel
+- intent: ranking_info
+  examples: |
+    - What is the [cet](seats) cut-off for vvce this year?
+    - What is the [comedk](seats) cut-off for this year?
+    - cutoff ranks.
+- intent: cet_verification_loc_info
+  examples: |
+    - Where does the cet document verification takes place in mysore?
+- intent: cet_verification_date_info
+  examples: |
+    - When does the cet document verification happen?
+- intent: college_admission_management_info
+  examples: |
+    - When do admissions to engineering courses start?
+    - admission time
+    - Is the mangement quota admission open?
+    - mangement quota admission
+- intent: college_cocurricular_info
+  examples: |
+    - What are the co-curricular activities in VVCE?
+    - cocurricular activities
+    - co-curricular activities
+- intent: college_extra_curricular_info
+  examples: |
+    - What are the extra-curricular activities available in VVCE?
+    - extra-curricular activities
+    - VVCE Events
+- intent: hostels_facilities_info
+  examples: |
+    - How good is the hostel facility at VVCE?
+    - Facilities offered in hostel
+- intent: college_ragging_info
+  examples: |
+    - What measures are taken to prevent ragging?
+    - Anti ragging precautions
+- intent: college_security_info
+  examples: |
+    - What security measures are in place at VVCE?
+    - What are the security measures
+    - security measures
+- intent: college_transportation_info
+  examples: |
+    - Do you offer transportation facility?
+    - What are the transportation facilites?
+- intent: college_physically_challenged_info
+  examples: |
+    - Can physically challenged students apply?
+    - Are physically challenged students eligibe for the courses?
+- intent: placement_1_info
+  examples: |
+    - What are the chances that a student graduating from VVCE will get placed in a good company?
+    - Will a student graduating from VVCE will get placed in a good company?
+- intent: scholarship_1_info
+  examples: |
+    - Does VVCE offer any scholarship?
+    - VVCE scholarship info
+    - Are there any scholarship facilities in vvce?
+- intent: hostel_fee_concession_info
+  examples: |
+    - Can we get any concessions on the hostel fees?
+    - Is any concessions offered on the hostel fees?
+    - Do we get any concessions on the hostel fees?
+- intent: wifi_facility_info
+  examples: |
+    - Do you offer free Wi-Fi access in hostels and on campus?
+    - Is free Wi-Fi access available inside hostels?
+    - Is free Wi-Fi access available inside campus?
+    - spped of collee internet
+    - internet
+    - network
+    - what is the wifi speed
+    - network speed
+    - what is the wifispeef
+    - wifi
+    - wifi speed
+    - what is the WiFi speed
+- intent: coeducation_info
+  examples: |
+    - Does the college offer co-education?
+    - Is coeducation offered in vvce?
+- intent: uniform_info
+  examples: |
+    - Is there a uniform for the students in VVCE?
+    - Are students supposed to wear uniform?
+- intent: comedk_exam_info
+  examples: |
+    - When does COMED-K exam takes place?
+    - When is the comedk exam conducted?
+- intent: cet_exam_info
+  examples: |
+    - When does cet exam takes place?
+    - When is the CET exam conducted?
+- intent: fee_refund_info
+  examples: |
+    - If I choose to withdraw my admission, will I get a refund of the fees paid to VVCE?
+    - Is refund of fee available?
+    - Can we get fee refund if we withdraw the admission?
+- intent: vvce_location_insight_info
+  examples: |
+    - Can we get an insight about the city in which VVCE is located?
+    - Can we get an insight about the city in which Vidyavardhaka College of Engineering? is located?
+    - Can I get an insight on Mysore
+    - Tell me more about Mysuru
+    - Mysuru
+- intent: counselor_info
+  examples: |
+    - Do you have a professional counselor?
+    - Is there a professional counselor in VVCE?
+    - professional courselor
+- intent: facilities_info
+  examples: |
+    - What are the other facilities available in VVCE?
+    - What are the other facilities available in Vidyavardhaka College of Engineering?
+    - VVCE facilities
+    - Facilities in Vidyavardhaka College of engineering
+- intent: contact_for_admission_info
+  examples: |
+    - Whom should I contact for details on admission?
+    - Whom should I reach out to for details on admission?
+    - Admission details contact
+    - Please mention your phone number.
+    - Please mention your email address
+    - Admission office
+    - so where is his office
+- intent: branches_info
+  examples: |
+    - What are the branches available?
+    - What are the courses available?
+    - What are programs available?
+    - Courses offered
+    - What are the streams offered?
+- intent: branches_actions_info
+  examples: |
+    - [UG](branch)
+    - [PG](branch)
+    - [Under graduate](branch)
+    - [post graduate](branch)
+    - What are the [UG](branch) courses available?
+    - What are the [PG](branch) programs available?
+    - Branches offered in [UG](branch)
+    - Courses available in [PG](branch)
+- intent: vvce_address_info
+  examples: |
+    - What is the location of VVCE?
+    - What is the location of Vidyavardhaka College of Engineering?
+    - Where is VVCE located?
+    - What is the address of VVCE?
+    - What is the address of Vidyavardhaka College of Engineering?
+    - VVCE address
+    - college location
+    - Share the college location
+    - VVCE
+    - vvce
+- intent: fee_structure_info
+  examples: |
+    - What is the fee structure?
+    - Can you give some details on fees?
+    - I would like to know the fee structure
+    - fee structure
+    - college fee
+    - College fee structure
+    - college fees
+    - Fees
+    - [fee](branch)
+    - College fee
+    - fee structue
+- intent: management_fees_info
+  examples: |
+    - I need details on management fees structure
+    - Can you give some details on management fees structure
+    - Management fees
+    - management admissions
+- intent: admission_process_under_covid_info
+  examples: |
+    - How will the admission process be carried out under COVID-19 pandemic?
+    - Admission process under CODID-19 pandemic
+- intent: placements_info
+  examples: |
+    - Can I know about placements opportunities?
+    - Can you tell me more about placements offers in Vidyavardhaka College of Engineering?
+- intent: entrepreneurship_guidance_info
+  examples: |
+    - Does college offer Entrepreneurship/Start-up guidance?
+    - Does Vidyavardhaka College of Engineering offer guidance on Entrepreneurship?
+    - Does VVCE offer guidance on Entrepreneurship?
+- intent: internship_guidance_info
+  examples: |
+    - Does college offer Internship guidance?
+    - Does Vidyavardhaka College of Engineering internship opportunities?
+    - Internship opportunities in VVCE.
+- intent: payment_mode_info
+  examples: |
+    - How do I pay fees?
+    - What are the modes of payment?
+    - Modes of fee payment
+- intent: interval_payment_info
+  examples: |
+    - Can we pay the fees in parts or intervals?
+    - Is interval payment allowed?
+    - Can we pay the fees in installments?
+- intent: complaints_info
+  examples: |
+    - I want raise a complaint.
+    - I have some issues
+    - complaint section
+    - I have to give a feedback
+    - Please mention your complaint
+- intent: inform_name
+  examples: |
+    - my name is [ashish](name)
+    - my name is [rahul](name)
+    - my name is [apneet](name)
+    - [ashish](name) is my name
+    - [ashish](name) this side
+    - people call me [ashish](name)
+    - [arjun](name)
+- intent: inform_number
+  examples: |
+    - my number is [8209829808](number)
+    - [8209829808](number)
+    - [8209829808](number) is my number
+    - my nobile number is [8209829808](number)
+- intent: inform_email
+  examples: |
+    - my email address is [naveen@gmail.com](email)
+    - [rakesh@yahoo.com](email)
+    - my email id is [naveen@gmail.com](email)
+    - email [naveen@gmail.com](email)
+    - [naveen@gmail.com](email) is my email id
+- intent: incubation_centre_info
+  examples: |
+    - where is the incubation centre
+    - location of the incubation centre
+    - incubation centre
+- intent: cafeteria_info
+  examples: |
+    - where is the cafeteria
+    - location of the cafeteria
+    - cafeteria
+    - Cafeteria
+- intent: canteen_info
+  examples: |
+    - where is the canteen
+    - location of the canteen
+    - canteen
+- intent: clinic_info
+  examples: |
+    - where is the clinic
+    - location of the clinic
+    - where is the health centre?
+    - health center
+    - location of the health center
+    - Health Care Center
+- intent: sports_complex_info
+  examples: |
+    - where is the sports complex
+    - location of the sports complex
+    - sports complex
+- intent: hostel_info
+  examples: |
+    - where is the hostel?
+    - hostel location
+    - Where can I find the hostel?
+    - vvce hostel location
+- intent: boys_hostel_info
+  examples: |
+    - where is the boys hostel
+    - location of the boys hostel
+    - boys hostel
+- intent: girls_hostel_info
+  examples: |
+    - where is the girls hostel
+    - location of the girls hostel
+    - girls hostel
+- intent: bank_info
+  examples: |
+    - where is the bank
+    - location of the bank
+    - bank
+- intent: parking_info
+  examples: |
+    - where is the parking
+    - location of the parking
+    - parking
+- intent: auditorium_info
+  examples: |
+    - where is the auditiorium
+    - location of the auditiorium
+    - auditiorium
+- intent: highest_package_info
+  examples: |
+    - what is the highest package in CS/ME/EEE/EC/IS/CV
+    - highest package in CS/ME/EEE/EC/IS/CV
+    - Highest placement package info
+    - Highest package
+- intent: CS_dept_info
+  examples: |
+    - where is the CS department
+    - location of the CS department
+    - cs dept
+    - computer science department
+    - computer science dept
+    - Cse phone number
+    - Cse
+    - CSE
+- intent: IS_dept_info
+  examples: |
+    - where is the IS department
+    - location of the IS department
+    - IS dept
+    - information science department
+    - information science dept
+    - [ISE](intake)
+- intent: Civil_dept_info
+  examples: |
+    - where is the Civil department
+    - location of the Civil department
+    - civil dept
+    - civil department
+- intent: math_dept_info
+  examples: |
+    - where is the mathematics department
+    - location of the mathematcis department
+    - maths dept
+    - maths department
+- intent: EEE_EC_dept_info
+  examples: |
+    - where is the EEE and EC department
+    - location of the EEE and EC department
+    - where is the electrical department
+    - where is the electronics and communication department
+    - location of E and C department
+    - location of E&C department
+    - Where is EEE department
+    - location of the electrical and electronics department
+    - ec dept
+    - ec department
+    - eee dept
+    - eee department
+- intent: mech_dept_info
+  examples: |
+    - where is the mechanical department
+    - location of the mechanical department
+    - where is the mech department
+    - location of the mech department
+    - mechanical dept
+    - mech dept
+- intent: Polytechnic_info
+  examples: |
+    - where is the polytechnic
+    - location of the Polytechnic
+    - polytechnic department
+    - polytechnic building
+    - polytechnic dept
+- intent: cs_hod_info
+  examples: |
+    - Who is the HOD of CS department
+    - Who is the head of department of Computer Science Engineering
+    - Where can I find HOD of CS
+    - Where can I meet head of department of Computer Science
+    - CS HOD
+    - CS head of department
+    - head of department of CS
+    - HOD of Computer Science Engineering
+    - hod cse
+    - where is cs hod
+    - cshod
+    - hodcs
+    - cs hod
+    - hod of cs
+    - Dr Ravi Kumar V
+    - Where can I find Dr Ravi Kumar V?
+    - Where is Dr Ravi Kumar V?
+    - Where is Dr Ravikumar V?
+- intent: ai_ml_hod_info
+  examples: |
+    - Who is the HOD of CS AI/ML department
+    - Who is the head of department of AI ML
+    - Where can I find HOD of CS AI ML
+    - Where can I meet head of department of Artificial Intelligence and Machine Learning
+    - CS AI ML HOD
+    - AI ML head of department
+    - head of department of AI ML
+    - HOD of AL/ML
+    - HOD ML
+    - HOD AI
+    - Where is Dr Vinutha D C?
+    - Where can I find Dr Vinutha D C?
+    - Dr Vinutha D C 
+- intent: is_hod_info
+  examples: |
+    - Who is the HOD of IS department
+    - Who is the head of department of Information Science
+    - Where can I find HOD of IS
+    - Where can I meet head of department of Information Science
+    - IS HOD
+    - IS head of department
+    - head of department of IS
+    - HOD of Information Science
+    - Dr A B Rajendra
+    - Where can I find Dr A B Rajendra?
+    - Where is Dr A B Rajendra?
+- intent: civil_hod_info
+  examples: |
+    - Who is the HOD of Civil department
+    - Who is the head of department of Civil Engineering
+    - Where can I find HOD of Civil Engineering
+    - Where can I meet head of department of Civil Engineering
+    - Civil HOD
+    - Civil Engineering head of department
+    - head of department of Civil Engineering
+    - HOD of Civil Engineering
+    - Dr S K Prasad
+    - Where can I find Dr S K Prasad?
+    - Where is Dr S K Prasad?
+- intent: maths_hod_info
+  examples: |
+    - Who is the HOD of Mathematics department
+    - Who is the head of department of Maths
+    - Where can I find HOD of Mathematics
+    - Where can I meet head of department of Maths
+    - Mathematics HOD
+    - Maths head of department
+    - Head of department of Mathematics
+    - HOD of Maths
+    - mathematics
+    - Dr N Bhaskar
+    - Where can I find Dr N Bhaskar?
+    - Where is Dr N Bhaskar?
+- intent: eee_hod_info
+  examples: |
+    - Who is the HOD of Electricals and Electronics Engineering
+    - Who is the head of department of EEE
+    - Where can I find HOD of EEE
+    - Where can I find HOD of EE
+    - Where can I meet head of department of EE
+    - EEE HOD
+    - Electricals and Electronics head of department
+    - Head of department of EE
+    - Head of department of EEE
+    - HOD of EEE
+    - HOD of EE
+    - Dr Shoba Shankar
+    - Where can I find Dr Shoba Shankar?
+    - Where is Dr Shoba Shankar?
+- intent: ece_hod_info
+  examples: |
+    - Who is the HOD of ECE department
+    - Who is the head of department of Electronics and Communications Engineering
+    - Where can I find HOD of ECE
+    - Where can I find HOD of EC
+    - Where can I meet head of department of Electronics and Communications Engineering
+    - ECE HOD
+    - EC HOD
+    - ECE head of department
+    - EC head of department
+    - head of department of ECE
+    - HOD of Electronics and Communications Engineering
+    - Dr Chandrashekar M Patil
+    - Where can I find Dr Chandrashekar M Patil?
+    - Where is Dr Chandrashekar M Patil?
+- intent: mech_hod_info
+  examples: |
+    - Who is the HOD of Mechanical
+    - Who is the head of department of Mechanical Engineering
+    - Where can I find HOD of mech
+    - Where can I meet head of department of mech
+    - Mechanical Engineering HOD
+    - Mech HOD
+    - Mech head of department
+    - Mechanical Engineering head of department
+    - head of department of Mech
+    - HOD of Mechanical Engineering
+    - Dr G V Naveen Prakash
+    - Where can I find Dr G V Naveen Prakash?
+    - Where is Dr G V Naveen Prakash?
+- intent: physics_hod_info
+  examples: |
+    - Who is the HOD of physics department
+    - Who is the head of department of Physics
+    - Where can I find HOD of physics
+    - Where can I meet head of department of physics
+    - physics HOD
+    - physics head of department
+    - head of department of physics
+    - HOD of physics
+    - physics hod
+    - Dr Divakara S
+    - Where can I find Dr Divakara S?
+    - Where is Dr Divakara S?
+- intent: chemistry_hod_info
+  examples: |
+    - Who is the HOD of Chemistry department
+    - Who is the head of department of chemistry
+    - Where can I find HOD of Chem
+    - Where can I meet head of department of chemistry
+    - Chem HOD
+    - Chemistry head of department
+    - head of department of chem
+    - HOD of Chemistry
+    - Dr Anitha Sudhir
+    - Where can I find Dr Anitha Sudhir?
+    - Where is Dr Anitha Sudhir?
+- intent: mba_hod_info
+  examples: |
+    - Who is the HOD of MBA department
+    - Who is the head of department of MBA
+    - Where can I find HOD of MBA
+    - Where can I meet head of department of MBA
+    - MBA HOD
+    - MBA head of department
+    - head of department of MBA
+    - HOD of MBA
+    - Dr P S V Balaji Rao
+    - Where can I find Dr P S V Balaji Rao?
+    - Where is Dr P S V Balaji Rao?
+- intent: library_info
+  examples: |
+    - Is there a library in this college?
+    - Is there a library in VVCE?
+    - Library in Vidyavardhaka College of Engineering
+    - Where is the library?
+    - Where can I find the library
+    - Library
+- intent: rnd_info
+  examples: |
+    - Is there a R&D in this college?
+    - Is there a RnD in VVCE?
+    - Is there a Research and development in VVCE?
+    - Rnd in Vidyavardhaka College of Engineering
+    - Where is the RnD department?
+    - Where can I find the R&D?
+    - Who should I contact for RnD
+    - RnD
+    - R n D
+    - R&D
+    - Research and Development
+    - dr g b krishnappa
+    - r&d
+    - dean rnd
+- intent: principal_contact_info
+  examples: |
+    - How do I contact the principal?
+    - Can I contact the principal?
+    - Principal contact info
+    - Principal email and phone number
+    - Principal email
+    - Principal phone number
+    - Principal phone no
+    - i need to contact principal
+- intent: college_contact_info
+  examples: |
+    - College contact info
+    - VVCE contact information
+    - Vidyavardhaka College of Engineering info
+    - Vidyavardhaka College information
+    - College email id
+    - college email
+    - college phone number
+    - college phone no
+    - How to join vvce
+- intent: pg_info
+  examples: |
+    - Are there any PG programs in VVCE?
+    - Are there any post graduate programs in Vidyavardhaka College of Engineering?
+    - What are the post graduate programs in this college?
+    - Post graduate programs
+    - Postgraduate programs
+    - PG programs
+- intent: pg_cutoff
+  examples: |
+    - Cut off ranks for pgcet
+    - What are the cutoff ranks for pgcet?
+    - pgcet cut-off
+    - pgcet cutoff ranks
+- intent: management_admission_info
+  examples: |
+    - How do I apply for management seat?
+    - Where should I apply for management seat?
+    - Management seat application portal
+    - Management admission website
+    - Management qouta seat
+- intent: college_brochure_info
+  examples: |
+    - Can I show me the college brochure?
+    - I want to have a look at your brochure
+    - Show me your brochure
+    - Show me the VVCE brochure
+    - Give me the VVCE brochure
+    - Brochure
+    - Can you send me the brochure?
+- intent: cet_cutoff_info
+  examples: |
+    - I would like to know more about the CET cutoff for this college
+    - What is the CET cutoff for VVCE
+    - What is the CET cutoff for Vidyavardhaka College of Engineering
+    - CET cutoff
+    - cutoff
+    - what is the cet cutoff
+- intent: academic_rules_info
+  examples: |
+    - I would like to know more about the academic rules
+    - Tell me about the academic regulations in VVCE
+    - What are the academic rules in Vidyavardhaka College of Engineering
+    - Academic rules
+    - Academic regulations
+- intent: pg_machine_design_subjects_info
+  examples: |
+    - I would like to know more about the PG Machine design subjects
+    - What are the subjects in Machine Design in PG
+    - Subjects in Machine Design PG
+    - Subjects in Machine Design Post graduate
+    - Syllabus of Machine Design Postgraduate
+- intent: pg_cs_subjects_info
+  examples: |
+    - I would like to know more about the PG CS subjects
+    - What are the subjects of CS in PG?
+    - Tell me about the subjects in Computer Science Post graduate program
+    - Subjects in CS PG
+    - Subjects of Computer Science in Post graduate
+    - Syllabus of Computer Science in Postgraduate program
+    - Syllabus of CS PG
+- intent: mba_scheme_info
+  examples: |
+    - I would like to know more about the MBA scheme in Vidyavardhaka College
+    - Tell me about the MBA scheme and syllabus
+    - What are the subjects in MBA program?
+    - MBA scheme
+    - MBA syllabus
+    - MBA subjects
+- intent: latest_circular_info
+  examples: |
+    - Where can I find the latest circulars from VVCE?
+    - Show me the latest circular from Vidyavardhaka College of Engineering
+    - Where do I find VVCE circulars?
+    - Circulars
+    - Autonomous exams
+    - Details on autonomous pattern
+    - autonomous notifications
+    - exam
+    - Is the NEET exam scheduled at vidyavardhaka tomorrow
+- intent: tap_location
+  examples: |
+    - Where is the tap department?
+    - Location on placement department
+    - Where is tap dept?
+    - Where can I find the placement dept?
+    - tap dept
+    - placement
+- intent: osl_lab_info
+  examples: |
+    - Where is the osl lab
+    - osl
+    - OSL
+    - Open Source Lab
+    - Where can I find open source lab?
+    - Locate OSL
+    - osl lab
+    - Where is OSL
+    - What is osl means
+- intent: apple_lab_info
+  examples: |
+    - Apple lab
+    - Where is apple lab
+    - apple laboratory
+- intent: college_faculty_info
+  examples: |
+    - College faculty
+    - cs faculty list
+    - computer science department faculty list
+    - faculties in IS
+    - faculties in Information Science department
+    - Mech faculties
+    - Mechanical branch faculties
+    - Civil faculties list
+    - Civil branch faculties list
+    - Info on EEE faculties
+    - E&C faculties
+    - E and C department faculties
+    - AI/ML faculties
+    - AI department faculties
+    - Faculty list of CSE
+    - Total faculty
+    - Cse faculty
+    - How many faculties are in cs department
+    - Number of faculties in CSE
+    - how are you
+- intent: sports_incharge_info
+  examples: |
+    - Who is head of sports?
+    - Sports incharge
+    - Sports information
+    - Sports in VVCE
+    - sports in this college
+    - Information on sports
+    - sports related information
+    - Sports
+- intent: dean_student_welfare_info
+  examples: |
+    - Dean student welfare
+    - Who is the dean of student welfare?
+    - Where is dean for student welfare
+    - student welfare dean
+    - student welfare
+    - Dr B C Ashok
+    - Dr Ashok B C
+    - Dr Ashok
+    - Ashok B C
+    - Ashok
+- intent: dean_academics_info
+  examples: |
+    - Who is the dean of academics?
+    - dean academics
+    - Dr H S Dayananda
+    - Dr T P Surekha
+    - academics dean
+    - dean of academics
+- intent: dean_academics_vtu_info
+  examples: |
+    - Who is vtu dean of academics?
+    - dean academics for vtu
+    - academics dean for vtu students
+    - dean of academics for visvsvaraya technological university
+    - dean academics for vtu syllabus
+    - dean academics for vtu scheme
+- intent: dean_academics_autonomous_info
+  examples: |
+    - Who is autonomous dean of academics?
+    - dean academics for autonomous
+    - academics dean for autonomous students
+    - dean academics for autonomous syllabus
+    - dean academics for autonomous scheme
+- intent: students_intake_info
+  examples: |
+    - Intake for [cse](intake) branch
+    - Intake for [cs](intake) branch
+    - Intake for [computer science](intake) branch
+    - Intake for [computer science and engineering](intake) branch
+    - Intake for [IS](intake) branch
+    - Intake for [ISE](intake) branch
+    - Intake for [information science](intake) course
+    - seats in [information science and engineering](intake) program
+    - Intake for [civil](intake) descipline
+    - Intake for [cv](intake) branch
+    - Intake for [civil engineering](intake) branch
+    - Intake for [eee](intake) branch
+    - Intake for [triple e](intake) branch
+    - number of seats available for [electrical and electronics](intake) branch
+    - Intake for [electrical and electronics engineering](intake) branch
+    - Intake for [ec](intake) branch
+    - Intake for [e and c](intake) branch
+    - Intake for [e&c](intake) branch
+    - total intake for [electronics and communication](intake) branch
+    - Intake for [mech](intake) branch
+    - Intake for [mechanical](intake) branch
+    - Intake for [me](intake) branch
+    - Intake for [Mechanical Engineering](intake) branch
+    - Intake for [ai/ml](intake) branch
+    - Intake for [ai&ml](intake) branch
+    - Intake for [artificial intelligence and machine learning](intake) branch
+    - Intake for [machine learning and artificial intelligence](intake) branch
+    - seating capacity for [artificial intelligence](intake) branch
+    - Intake for [machine learning](intake) branch
+    - Intake for [ai](intake) branch
+    - Intake for [ml](intake) branch
+    - Intake for [ai ml](intake) branch
+    - Intake for [ml/ai](intake) branch
+    - [cs](intake) intake
+    - Intake of [cse](intake)
+    - Intake of [CSE](intake)
+    - Intake of [ISE](intake)

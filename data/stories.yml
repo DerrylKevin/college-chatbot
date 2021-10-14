@@ -1,0 +1,405 @@
+version: "2.0"
+stories:
+- story: thanks
+  steps:
+  - intent: affirm
+  - action: utter_goodbye
+- story: principal name 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: principal_personal_info
+  - action: utter_principal_name
+- story: principal name 2
+  steps:
+  - intent: principal_personal_info
+  - action: utter_principal_name
+- story: principal room 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: principal_meet_info
+  - action: utter_principal_room
+- story: principal room 2
+  steps:
+  - intent: principal_meet_info
+  - action: utter_principal_room
+- story: vvce info
+  steps:
+  - intent: why_vvce_info
+  - action: utter_vvce_info
+- story: college branch info 1
+  steps:
+  - intent: branch_offered_1_info
+  - action: action_utter_branch
+- story: hostel fee 1
+  steps:
+  - intent: hostel_general_info
+  - action: utter_ask_gender
+  - intent: gender_info
+  - action: action_utter_hostel_fee
+- story: hostel fee 2
+  steps:
+  - intent: hostel_on_gender_fee_info
+  - action: action_utter_hostel_fee
+- story: accredation 1
+  steps:
+  - intent: institute_accredited_info
+  - action: utter_accredation
+- story: cutoff
+  steps:
+  - intent: ranking_info
+  - action: action_utter_seat_cutoffs
+- story: doc veri date
+  steps:
+  - intent: cet_verification_date_info
+  - action: utter_verification_date
+- story: doc veri loc
+  steps:
+  - intent: cet_verification_loc_info
+  - action: utter_verification_loc
+- story: management info 1
+  steps:
+  - intent: college_admission_management_info
+  - action: utter_management_admission_info
+- story: cocurricular info
+  steps:
+  - intent: college_cocurricular_info
+  - action: utter_cocurricular_info
+- story: extracurricular info
+  steps:
+  - intent: college_extra_curricular_info
+  - action: utter_extracurricular_info
+- story: hostel facilities info
+  steps:
+  - intent: hostels_facilities_info
+  - action: utter_hostel_facilities
+- story: college ragging info
+  steps:
+  - intent: college_ragging_info
+  - action: utter_anti_ragging
+- story: college security info
+  steps:
+  - intent: college_security_info
+  - action: utter_security_details
+- story: college transport info
+  steps:
+  - intent: college_transportation_info
+  - action: utter_transportation_details
+- story: college physically challenged info
+  steps:
+  - intent: college_physically_challenged_info
+  - action: utter_physically_challenged_info
+- story: college placement info
+  steps:
+  - intent: placement_1_info
+  - action: utter_placement_1
+- story: college scholarship info
+  steps:
+  - intent: scholarship_1_info
+  - action: utter_scholarship_1
+- story: hostel fee concession info
+  steps:
+  - intent: hostel_fee_concession_info
+  - action: utter_hostel_fee_concession
+- story: college wifi info
+  steps:
+  - intent: wifi_facility_info
+  - action: utter_wifi_info
+- story: college coeducation info
+  steps:
+  - intent: coeducation_info
+  - action: utter_coeducation
+- story: college uniform info
+  steps:
+  - intent: uniform_info
+  - action: utter_uniform_info
+- story: comedk exam info
+  steps:
+  - intent: comedk_exam_info
+  - action: utter_comedk_exam_info
+- story: cet exam info
+  steps:
+  - intent: cet_exam_info
+  - action: utter_cet_exam_info
+- story: fee refund info
+  steps:
+  - intent: fee_refund_info
+  - action: utter_refund_info
+- story: mysore insight
+  steps:
+  - intent: vvce_location_insight_info
+  - action: utter_mysore_insight
+- story: professional counselor
+  steps:
+  - intent: counselor_info
+  - action: utter_counselor
+- story: college facilities
+  steps:
+  - intent: facilities_info
+  - action: utter_facilities
+- story: contact for admission related queries
+  steps:
+  - intent: contact_for_admission_info
+  - action: utter_contact_for_admission
+- story: branches available 1
+  steps:
+  - intent: branches_info
+  - action: utter_inform_program
+  - intent: branches_actions_info
+  - action: action_utter_branch_offered
+- story: branches available 2
+  steps:
+  - intent: branches_actions_info
+  - action: action_utter_branch_offered
+- story: VVCE address
+  steps:
+  - intent: vvce_address_info
+  - action: utter_vvce_address
+- story: fee structure
+  steps:
+  - intent: fee_structure_info
+  - action: utter_fee_structure
+- story: management fees
+  steps:
+  - intent: management_fees_info
+  - action: utter_management_fees
+- story: admission process under covid
+  steps:
+  - intent: admission_process_under_covid_info
+  - action: utter_management_fees
+- story: placement info
+  steps:
+  - intent: placements_info
+  - action: utter_placements
+- story: entrepreneurship guidance
+  steps:
+  - intent: entrepreneurship_guidance_info
+  - action: utter_entrepreneurship_guidance
+- story: internship guidance
+  steps:
+  - intent: internship_guidance_info
+  - action: utter_internship_guidance
+- story: payment modes
+  steps:
+  - intent: payment_mode_info
+  - action: utter_payment_mode
+- story: payment in installations
+  steps:
+  - intent: interval_payment_info
+  - action: utter_interval_payment
+- story: fill the form
+  steps:
+  - intent: complaints_info
+  - action: user_details_form
+  - active_loop: user_details_form
+  - active_loop: null
+  - action: action_fill_table
+- story: incubation_centre
+  steps:
+  - intent: incubation_centre_info
+  - action: utter_incubation_centre
+- story: cafeteria
+  steps:
+  - intent: cafeteria_info
+  - action: utter_cafeteria
+- story: canteen
+  steps:
+  - intent: canteen_info
+  - action: utter_canteen
+- story: clinic
+  steps:
+  - intent: clinic_info
+  - action: utter_clinic
+- story: sports_complex
+  steps:
+  - intent: sports_complex_info
+  - action: utter_sports_complex
+- story: hoste general
+  steps:
+  - intent: hostel_info
+  - action: utter_hostel_general
+- story: boys_hostel
+  steps:
+  - intent: boys_hostel_info
+  - action: utter_boys_hostel
+- story: girls_hostel
+  steps:
+  - intent: girls_hostel_info
+  - action: utter_girls_hostel
+- story: bank
+  steps:
+  - intent: bank_info
+  - action: utter_bank
+- story: parking
+  steps:
+  - intent: parking_info
+  - action: utter_parking
+- story: highest_package
+  steps:
+  - intent: highest_package_info
+  - action: utter_highest_package
+- story: CS_dept
+  steps:
+  - intent: CS_dept_info
+  - action: utter_CS_dept
+- story: IS_dept
+  steps:
+  - intent: IS_dept_info
+  - action: utter_IS_dept
+- story: Civil_dept
+  steps:
+  - intent: Civil_dept_info
+  - action: utter_Civil_dept
+- story: math_dept
+  steps:
+  - intent: math_dept_info
+  - action: utter_math_dept
+- story: EEE_EC_dept
+  steps:
+  - intent: EEE_EC_dept_info
+  - action: utter_EEE_EC_dept
+- story: mech_dept
+  steps:
+  - intent: mech_dept_info
+  - action: utter_mech_dept
+- story: Polytechnic
+  steps:
+  - intent: Polytechnic_info
+  - action: utter_Polytechnic
+- story: cs hod
+  steps:
+  - intent: cs_hod_info
+  - action: utter_cs_hod_info
+- story: ai ml hod
+  steps:
+  - intent: ai_ml_hod_info
+  - action: utter_ai_ml_hod_info
+- story: is hod
+  steps:
+  - intent: is_hod_info
+  - action: utter_is_hod_info
+- story: civil hod
+  steps:
+  - intent: civil_hod_info
+  - action: utter_civil_hod_info
+- story: maths hod
+  steps:
+  - intent: maths_hod_info
+  - action: utter_maths_hod_info
+- story: eee hod
+  steps:
+  - intent: eee_hod_info
+  - action: utter_eee_hod_info
+- story: ece hod
+  steps:
+  - intent: ece_hod_info
+  - action: utter_ece_hod_info
+- story: mech hod
+  steps:
+  - intent: mech_hod_info
+  - action: utter_mech_hod_info
+- story: physics hod
+  steps:
+  - intent: physics_hod_info
+  - action: utter_physics_hod_info
+- story: chemistry hod
+  steps:
+  - intent: chemistry_hod_info
+  - action: utter_chemistry_hod_info
+- story: mba hod
+  steps:
+  - intent: mba_hod_info
+  - action: utter_mba_hod_info
+- story: library hod
+  steps:
+  - intent: library_info
+  - action: utter_library_info
+- story: rnd
+  steps:
+  - intent: rnd_info
+  - action: utter_rnd_info
+- story: principal contact info
+  steps:
+  - intent: principal_contact_info
+  - action: utter_principal_contact_info
+- story: college contact info
+  steps:
+  - intent: college_contact_info
+  - action: utter_college_contact_info
+- story: postgraduate info
+  steps:
+  - intent: pg_info
+  - action: utter_pg_info
+- story: management admission info
+  steps:
+  - intent: management_admission_info
+  - action: utter_management_admission_info
+- story: college brochure info
+  steps:
+  - intent: college_brochure_info
+  - action: utter_college_brochure_info
+- story: cet cutoff info
+  steps:
+  - intent: cet_cutoff_info
+  - action: utter_cet_cutoff_info
+- story: academic rules info
+  steps:
+  - intent: academic_rules_info
+  - action: utter_academic_rules_info
+- story: pg machine design subjects info
+  steps:
+  - intent: pg_machine_design_subjects_info
+  - action: utter_pg_machine_design_subjects_info
+- story: pg cs subjects info
+  steps:
+  - intent: pg_cs_subjects_info
+  - action: utter_pg_cs_subjects_info
+- story: mba scheme info
+  steps:
+  - intent: mba_scheme_info
+  - action: utter_mba_scheme_info
+- story: latest circular info
+  steps:
+  - intent: latest_circular_info
+  - action: utter_latest_circular_info
+- story: tap dept info
+  steps:
+  - intent: tap_location
+  - action: utter_tap_location
+- story: osl
+  steps:
+  - intent: osl_lab_info
+  - action: utter_osl_details
+- story: apple
+  steps:
+  - intent: apple_lab_info
+  - action: utter_apple_lab_details
+- story: faculty
+  steps:
+  - intent: college_faculty_info
+  - action: utter_faculty_details
+- story: sports
+  steps:
+  - intent: sports_incharge_info
+  - action: utter_sports_details
+- story: dean student welfare
+  steps:
+  - intent: dean_student_welfare_info
+  - action: utter_student_welfare
+- story: dean academics
+  steps:
+  - intent: dean_academics_info
+  - action: utter_dean_academics
+- story: dean academics vtu
+  steps:
+  - intent: dean_academics_vtu_info
+  - action: utter_dean_academics_vtu
+- story: dean academics autonomous
+  steps:
+  - intent: dean_academics_autonomous_info
+  - action: utter_dean_academics_autonomous
+- story: intake number
+  steps:
+  - intent: students_intake_info
+  - action: action_utter_intake_number
